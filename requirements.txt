@@ -1,6 +1,7 @@
 streamlit
 spacy
-sklearn
+scikit-learn
+pandas
 joblib
 
 
