@@ -3,5 +3,6 @@ spacy[cpu]
 pandas
 joblib
 thinc==8.1.0
+scikit-learn
 
 
