@@ -93,7 +93,7 @@ if st.button('Verificar'):
     if source and headline:
         prediction = predict_fake_news(source, headline)
         
-        if prediction == 0:
+        if prediction == 1:
             st.success('La noticia es verdadera.')
         else:
             st.error('La noticia es verdadera.')
