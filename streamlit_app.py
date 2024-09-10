@@ -95,7 +95,7 @@ if st.button('Verificar'):
         prediction = predict_fake_news(source, headline)
 
         st.write(f"Valor de predicción: {prediction}")  # Mostrar el valor en la interfaz
-        if prediction == 1:
+        if prediction == 0:
             st.success('La noticia es verdadera.')
         else:
             st.error('La noticia es falsa.')
