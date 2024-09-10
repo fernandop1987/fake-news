@@ -45,31 +45,12 @@ def stemming(content):
 
 data['contenido'] = data['contenido'].apply(stemming)
 
-# Separamos data y etiqueta
-
-X = data['contenido'].values
-Y = data['Etiqueta'].values
-
-
-# TF-IDF
-
-# Convertimos el texto a variables numéricas
-vectorizer = TfidfVectorizer()
-vectorizer.fit(X)
-X = vectorizer.transform(X)
-
-#Split Train - Test
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, stratify=Y, random_state=2)
-
-#Regresión Logística
-model = LogisticRegression()
-model.fit(X_train, Y_train)
 
 #######################
 
 # Cargar el modelo y el vectorizador guardados
-##model = joblib.load('logistic_regression_model.pkl')
-##vectorizer = joblib.load('tfidf_vectorizer.pkl')
+model = joblib.load('logistic_regression_model.pkl')
+vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 
 # Función para predecir si una noticia es fake o no
