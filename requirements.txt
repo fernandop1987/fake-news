@@ -3,7 +3,7 @@ numpy
 pandas
 re
 nltk
-sklearn
+scikit-learn
 joblib
 
 
