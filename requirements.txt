@@ -4,5 +4,6 @@ pandas
 nltk
 joblib
 openpyxl
-spacy[cpu]==3.4.0
+spacy[cpu]==3.4.0  # Versión para CPU, evita dependencias de GPU
+thinc==8.0.17      # Versión compatible de thinc sin GPU
 scikit-learn
