@@ -63,6 +63,8 @@ def lemmatization(content):
     return ' '.join(lemmas)
 
 # Función para predecir si una noticia es fake o no
+# Desactivar el uso de cache en la predicción
+@st.cache_data(experimental_allow_widgets=True, show_spinner=False)
 def predict_fake_news(source, headline):
     # Combinar fuente y titular
     content = source + ' ' + headline
