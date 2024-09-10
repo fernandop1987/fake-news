@@ -85,6 +85,9 @@ st.title('Detección de Fake News')
 source = st.text_input('Fuente de la noticia')
 headline = st.text_input('Titular de la noticia')
 
+# Limpiar caché al inicio de la app
+st.cache_data.clear()
+
 # Botón para hacer la predicción
 if st.button('Verificar'):
     if source and headline:
