@@ -3,7 +3,7 @@ numpy
 pandas
 re
 nltk
-scikit-learn
+scikit-learn==1.1.1
 joblib
 
 
