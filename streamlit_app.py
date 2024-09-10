@@ -13,6 +13,8 @@ from sklearn.metrics import accuracy_score
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
+import joblib
+
 
 #######################
 # Load data
