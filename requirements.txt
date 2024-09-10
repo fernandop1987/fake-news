@@ -3,5 +3,5 @@ numpy
 pandas
 nltk
 joblib
-
+openpyxl
 
