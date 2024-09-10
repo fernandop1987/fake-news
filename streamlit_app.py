@@ -44,8 +44,6 @@ def stemming(content):
     review = ' '.join(review)
     return review
 
-data['contenido'] = data['contenido'].apply(stemming)
-
 
 #######################
 
