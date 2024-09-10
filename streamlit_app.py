@@ -53,6 +53,14 @@ def stemming(content):
 model = joblib.load('logistic_regression_model.pkl')
 vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
+# Cargar el modelo de lematización en español de Spacy
+nlp = spacy.load('es_core_news_sm')
+
+# Función de lematización
+def lemmatization(content):
+    doc = nlp(content)
+    lemmas = [token.lemma_ for token in doc if not token.is_stop]
+    return ' '.join(lemmas)
 
 # Función para predecir si una noticia es fake o no
 def predict_fake_news(source, headline):
@@ -60,7 +68,7 @@ def predict_fake_news(source, headline):
     content = source + ' ' + headline
     
     # Preprocesar el contenido
-    preprocessed_content = stemming(content)
+    preprocessed_content = lemmatization(content)
     
     # Transformar el texto con el vectorizador TF-IDF
     content_vectorized = vectorizer.transform([preprocessed_content])
