@@ -93,6 +93,6 @@ if st.button('Verificar'):
         if prediction == 0:
             st.success('La noticia es verdadera.')
         else:
-            st.error('La noticia es falsa.')
+            st.error('La noticia es verdadera.')
     else:
         st.warning('Por favor, ingrese tanto la fuente como el titular.')
