@@ -97,7 +97,8 @@ headline = st.text_input('Titular de la noticia')
 if st.button('Verificar'):
     if source and headline:
         prediction = predict_fake_news(source, headline)
-        
+
+        st.write(f"Valor de predicción: {prediction}")  # Mostrar el valor en la interfaz
         if prediction == 1:
             st.success('La noticia es verdadera.')
         else:
