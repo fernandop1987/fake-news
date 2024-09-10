@@ -5,13 +5,13 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-from scikit-learn.feature_extraction.text import TfidfVectorizer
-from scikit-learn.model_selection import train_test_split
-from scikit-learn.linear_model import LogisticRegression
-from scikit-learn.metrics import accuracy_score
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
 from nltk.stem.porter import PorterStemmer
-from scikit-learn.metrics import confusion_matrix
-from scikit-learn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 
 #######################
 # Load data
