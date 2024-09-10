@@ -1,7 +1,3 @@
-# Limpiar caché al inicio de la app
-st.cache_data.clear()
-
-
 import streamlit as st
 import numpy as np
 import pandas as pd
