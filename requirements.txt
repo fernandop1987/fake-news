@@ -4,5 +4,5 @@ pandas
 nltk
 joblib
 openpyxl
-spacy
+spacy[cpu]==3.4.0
 scikit-learn
